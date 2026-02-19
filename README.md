@@ -4,7 +4,7 @@
 
 Este projeto faz parte de um exercício prático de estruturação de pipelines utilizando **GitHub Actions**.
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias utilizadas
 - **Linguagem:** Node.js
 - **Testes:** Runner nativo do Node.js
 - **CI/CD:** GitHub Actions
