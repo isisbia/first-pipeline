@@ -1,0 +1,30 @@
+name: Pipeline Integração Contínua Vercel
+
+on:
+    push:
+        branches: [ main ]
+
+    pull_request:
+        branches: [ main ]
+
+jobs:
+    test-and-build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Baixar código
+              uses: actions/checkout@v2
+
+            - name: Configurar Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '22.x'
+
+            - name: Instalar dependências
+              run: npm install
+
+            - name: Instalar Vercel CLI
+              run: npm install -g vercel
+
+            - name: Realizar teste de build
+              run: npm test
